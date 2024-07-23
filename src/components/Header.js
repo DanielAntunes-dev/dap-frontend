@@ -76,7 +76,7 @@ const Header = () => {
                   >
                     <img src="/images/svg/user.svg" alt="user" />
                     <p className="mb-0">
-                      Log in <br /> Minha conta
+                      Login <br /> Minha conta
                     </p>
                   </Link>
                 </div>
@@ -142,7 +142,7 @@ const Header = () => {
                 <div className="menu-links">
                   <div className="d-flex align-items-center gap-15">
                     <NavLink to="/">Home</NavLink>
-                    <NavLink to="/store">Nossa Loja</NavLink>
+                    <NavLink to="/products">Nossa Loja</NavLink>
                     <NavLink to="/blogs">Blogs</NavLink>
                     <NavLink to="/contact">Contato</NavLink>
                   </div>

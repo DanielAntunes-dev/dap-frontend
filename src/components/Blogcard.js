@@ -14,7 +14,7 @@ const Blogcard = () => {
         <p className="desc">
           A invenção dos jeans azuis foi apenas o início do modo...
         </p>
-        <Link to="/" className="button">
+        <Link to="/blog/:id" className="button">
           Leia mais
         </Link>
       </div>
