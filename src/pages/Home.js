@@ -4,17 +4,42 @@ import Marquee from "react-fast-marquee";
 import Blogcard from "../components/Blogcard";
 import ProductCard from "../components/ProductCard";
 import SpecialProduct from "../components/SpecialProduct";
+import Meta from "../components/Meta";
+// <Marque
+
+import brandAdidas from "../images/logomarcas/adidas.jpg";
+import brandCalvinKlein from "../images/logomarcas/calvin-klein.jpg";
+import brandCavalera from "../images/logomarcas/cavalera.jpg";
+import brandColcci from "../images/logomarcas/colcci.jpg";
+import brandDiesel from "../images/logomarcas/diesel.jpg";
+import brandLacoste from "../images/logomarcas/lacoste.jpg";
+import brandLevis from "../images/logomarcas/levis.jpg";
+import brandOsklen from "../images/logomarcas/osklen.jpg";
+import brandTommy from "../images/logomarcas/tommy.jpg";
+
+// Marque />
+
+// <banner
+
+import mainBanner from "../images/banner/banner-2.png";
+import smallBanner1 from "../images/banner/bg-1.png";
+import smallBanner2 from "../images/banner/bg-2.png";
+import smallBanner3 from "../images/banner/bg-3.png";
+import smallBanner4 from "../images/banner/bg-4.png";
+
+// banner />
 
 const Home = () => {
   return (
     <>
+      <Meta title={"DAP Multimarcas"} />
       <section className="home-wrapper-1 py-5">
         <div className="container-xxl">
           <div className="row">
             <div className="col-lg-6">
               <div className="main-banner position-relative">
                 <img
-                  src="images/banner/banner-2.png"
+                  src={mainBanner}
                   className="img-fluid rounded-3"
                   alt="main banner"
                 />
@@ -30,7 +55,7 @@ const Home = () => {
               <div className="d-flex flex-wrap gap-10 justify-content-around align-items-center">
                 <div className="small-banner position-relative mb-2">
                   <img
-                    src="images/banner/bg-1.png"
+                    src={smallBanner1}
                     className="img-fluid rounded-3"
                     alt="small banner"
                   />
@@ -42,7 +67,7 @@ const Home = () => {
                 </div>
                 <div className="small-banner position-relative mb-2">
                   <img
-                    src="images/banner/bg-2.png"
+                    src={smallBanner2}
                     className="img-fluid rounded-3"
                     alt="small banner"
                   />
@@ -54,7 +79,7 @@ const Home = () => {
                 </div>
                 <div className="small-banner position-relative ">
                   <img
-                    src="images/banner/bg-3.png"
+                    src={smallBanner3}
                     className="img-fluid rounded-3"
                     alt="small banner"
                   />
@@ -66,7 +91,7 @@ const Home = () => {
                 </div>
                 <div className="small-banner position-relative ">
                   <img
-                    src="images/banner/bg-4.png"
+                    src={smallBanner4}
                     className="img-fluid rounded-3"
                     alt="emall banner"
                   />
@@ -284,65 +309,57 @@ const Home = () => {
                   <div className="mx-4 w-25 ">
                     <img
                       className="img-wrapper"
-                      src="images/logomarcas/adidas.png"
+                      src={brandAdidas}
                       alt="brand"
                     />
                   </div>
                   <div className="mx-4 w-25 ">
                     <img
                       className="img-wrapper"
-                      src="images/logomarcas/calvin-klein.png"
+                      src={brandCalvinKlein}
                       alt="brand"
                     />
                   </div>
                   <div className="mx-4 w-25 ">
                     <img
                       className="img-wrapper"
-                      src="images/logomarcas/cavalera.png"
+                      src={brandCavalera}
                       alt="brand"
                     />
                   </div>
                   <div className="mx-4 w-25 ">
                     <img
                       className="img-wrapper"
-                      src="images/logomarcas/colcci.jpg"
+                      src={brandColcci}
                       alt="brand"
                     />
                   </div>
                   <div className="mx-4 w-25 ">
                     <img
                       className="img-wrapper"
-                      src="images/logomarcas/diesel.jpg"
+                      src={brandDiesel}
                       alt="brand"
                     />
                   </div>
                   <div className="mx-4 w-25 ">
                     <img
                       className="img-wrapper"
-                      src="images/logomarcas/lacoste.png"
+                      src={brandLacoste}
                       alt="brand"
                     />
                   </div>
                   <div className="mx-4 w-25 ">
-                    <img
-                      className="img-wrapper"
-                      src="images/logomarcas/levis.png"
-                      alt="brand"
-                    />
+                    <img className="img-wrapper" src={brandLevis} alt="brand" />
                   </div>
                   <div className="mx-4 w-25 ">
                     <img
                       className="img-wrapper"
-                      src="images/logomarcas/osklen.png"
+                      src={brandOsklen}
                       alt="brand"
                     />
                   </div>
                   <div className="mx-4 w-25 ">
-                    <img
-                      className="img-wrapper"
-                      src="images/logomarcas/tommy.png"
-                      alt="brand"
-                    />
+                    <img className="img-wrapper" src={brandTommy} alt="brand" />
                   </div>
                 </Marquee>
               </div>

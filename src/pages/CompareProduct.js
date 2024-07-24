@@ -1,13 +1,11 @@
 import React from "react";
 import Meta from "../components/Meta";
-import BreadCrumb from "../components/BreadCrumb";
 import Color from "../components/Color";
 
 const CompapreProduct = () => {
   return (
     <>
-      <Meta title={"Compare Products"} />
-      <BreadCrumb title="Compare Products" />
+      <Meta title={"Comparar produtos"} />
       <div className="compare-product-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">

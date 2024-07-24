@@ -1,6 +1,5 @@
 import React from "react";
 import Meta from "../components/Meta";
-import BreadCrumb from "../components/BreadCrumb";
 import { Link } from "react-router-dom";
 import { RiArrowGoBackFill } from "react-icons/ri";
 
@@ -8,7 +7,6 @@ const SingleBlog = () => {
   return (
     <>
       <Meta title={"Blog"} />
-      <BreadCrumb title="Blog" />
       <div className="blog-wrapper home-wrapper-2 py-5">
         <div className="container-xxl">
           <div className="row">

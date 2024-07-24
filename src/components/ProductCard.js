@@ -1,6 +1,10 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { Link, useLocation } from "react-router-dom";
+import wish from "../images/svg/wish.svg";
+import compare from "../images/svg/prodcompare.svg";
+import view from "../images/svg/view.svg";
+import addCart from "../images/svg/add-cart.svg";
 
 const ProductCard = (props) => {
   const { grid } = props;
@@ -14,7 +18,7 @@ const ProductCard = (props) => {
         <Link to=":id" className="product-card position-relative">
           <div className="wishlist-icon position-absolute">
             <Link>
-              <img src="images/svg/wish.svg" alt="" />
+              <img src={wish} alt="wishlist" />
             </Link>
           </div>
           <div className="product-image">
@@ -53,13 +57,13 @@ const ProductCard = (props) => {
           <div className="action-bar position-absolute">
             <div className="d-flex flex-column gap-15">
               <Link>
-                <img src="images/svg/prodcompare.svg" alt="compare products" />
+                <img src={compare} alt="compare products" />
               </Link>
               <Link>
-                <img src="images/svg/view.svg" alt="add cart" />
+                <img src={view} alt="view" />
               </Link>
               <Link>
-                <img src="images/svg/add-cart.svg" alt="add cart" />
+                <img src={addCart} alt="add cart" />
               </Link>
             </div>
           </div>

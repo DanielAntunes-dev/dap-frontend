@@ -1,13 +1,11 @@
 import React from "react";
 import Meta from "../components/Meta";
-import BreadCrumb from "../components/BreadCrumb";
 import { Link } from "react-router-dom";
 
 const ForgotPassword = () => {
   return (
     <>
-      <Meta title={"Forgot Password"} />
-      <BreadCrumb title="Forgot Password" />
+      <Meta title={"Esqueceu a senha"} />
       <div className="login-wrapper home-wrapper-2 py-5">
         <div className="container-xxl">
           <div className="row">

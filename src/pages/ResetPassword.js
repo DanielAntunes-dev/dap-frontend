@@ -1,12 +1,10 @@
 import React from "react";
 import Meta from "../components/Meta";
-import BreadCrumb from "../components/BreadCrumb";
 
 const ResetPassword = () => {
   return (
     <>
       <Meta title={"Nova senha"} />
-      <BreadCrumb title="Nova senha" />
       <div className="login-wrapper home-wrapper-2 py-5">
         <div className="container-xxl">
           <div className="row">

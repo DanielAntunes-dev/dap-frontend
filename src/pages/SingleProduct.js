@@ -5,7 +5,7 @@ import ReactImageZoom from "react-image-zoom";
 import Color from "../components/Color";
 import { GoGitCompare } from "react-icons/go";
 import { IoMdHeartEmpty } from "react-icons/io";
-import { LiaShippingFastSolid } from "react-icons/lia";
+import Meta from "../components/Meta";
 
 const SingleProduct = () => {
   const props = {
@@ -16,8 +16,19 @@ const SingleProduct = () => {
   };
   const [orderedProduct] = useState(true);
   // , setorderedProduct
+
+  const copyToClipboard = (text) => {
+    let textField = document.createElement("textarea");
+    textField.innerText = text;
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand("copy");
+    textField.remove();
+  };
+
   return (
     <>
+      <Meta title={"Produto"} />
       <div className="main-product-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
@@ -79,7 +90,7 @@ const SingleProduct = () => {
                     Deixe uma avaliação
                   </a>
                 </div>
-                <div className="border-bottom py-3">
+                <div className=" py-3">
                   <div className="d-flex gap-10 align-items-center my-2">
                     <h3 className="product-heading">Type :</h3>
                     <p className="product-data">Camiseta</p>
@@ -121,7 +132,7 @@ const SingleProduct = () => {
                     <h3 className="product-heading">Cor :</h3>
                     <Color />
                   </div>
-                  <div className="d-flex align-items-center gap-15 flex-row mt-2 mb-3">
+                  <div className="d-flex  gap-15 flex-row mt-5 mb-3">
                     <h3 className="product-heading">Qtd :</h3>
                     <div className="">
                       <input
@@ -132,7 +143,7 @@ const SingleProduct = () => {
                         style={{ width: "70px" }}
                       ></input>
                     </div>
-                    <div className="d-flex alig-items-center gap-30 ms-3">
+                    <div className="d-flex alig-items-center gap-15 ms-3 mb-3">
                       <button className="button border-0" type="submit">
                         Adicionar ao carrinho
                       </button>
@@ -141,7 +152,7 @@ const SingleProduct = () => {
                       </button>
                     </div>
                   </div>
-                  <div className="d-flex align-items-center gap-15">
+                  <div className="d-flex align-items-center gap-15 mb-4">
                     <div>
                       <a href="##">
                         <GoGitCompare className="fs-5 me-1" /> Adicione e
@@ -155,140 +166,31 @@ const SingleProduct = () => {
                       </a>
                     </div>
                   </div>
-                  <div className="d-flex gap-10 align-items-center my-2 ">
-                    <div
-                      className="accordion accordion-flush w-100"
-                      id="accordionFlushExample"
+                  <div className="d-flex flex-column gap-10 my-2 mb-5 ">
+                    <h3 className="product-heading">Entrega e devolução</h3>
+                    <p className="product-data">
+                      Os pedidos são processados dentro de
+                      <b> 3 dias úteis.</b>
+                      <br />
+                      Não enviamos pedidos aos finais de semana ou feriados.
+                      Você pode devolver um produto dentro de
+                      <b> 7 dias</b> a partir da data de entrega. Os produtos
+                      devolvidos devem estar em condições originais, não
+                      utilizados, com todas as etiquetas e embalagens intactas.
+                    </p>
+                  </div>
+                  <div className="d-flex flex-column gap-10 my-2  ">
+                    <h3 className="product-heading">Link do produto</h3>
+                    <a
+                      href="##"
+                      onClick={() => {
+                        copyToClipboard(
+                          "/images/produtos/t-shirt/acostamento/1.jpg"
+                        );
+                      }}
                     >
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="flush-headingOne">
-                          <button
-                            className="accordion-button collapsed product-heading"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseOne"
-                          >
-                            <LiaShippingFastSolid className="fs-5 me-2" />
-                            Entrega e devolução
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseOne"
-                          className="accordion-collapse collapse product-data"
-                          aria-labelledby="flush-headingOne"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div className="accordion-body">
-                            Os pedidos são processados dentro de{" "}
-                            <b>3 dias úteis.</b>
-                            Não enviamos pedidos aos finais de semana ou
-                            feriados. Você pode devolver um produto dentro de{" "}
-                            <b>7 dias</b> a partir da data de entrega. Os
-                            produtos devolvidos devem estar em condições
-                            originais, não utilizados, com todas as etiquetas e
-                            embalagens intactas.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="flush-headingTwo">
-                          <button
-                            className="accordion-button collapsed product-heading"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseTwo"
-                          >
-                            Material
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseTwo"
-                          className="accordion-collapse collapse product-data"
-                          aria-labelledby="flush-headingTwo"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div className="accordion-body">
-                            Placeholder content for this accordion, which is
-                            intended to demonstrate the{" "}
-                            <code>.accordion-flush</code> class. This is the
-                            second item's accordion body. Let's imagine this
-                            being filled with some actual content.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="flush-headingThree"
-                        >
-                          <button
-                            className="accordion-button collapsed product-heading"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseThree"
-                          >
-                            Dimensão
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseThree"
-                          className="accordion-collapse collapse product-data"
-                          aria-labelledby="flush-headingThree"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div className="accordion-body">
-                            Placeholder content for this accordion, which is
-                            intended to demonstrate the{" "}
-                            <code>.accordion-flush</code> class. This is the
-                            third item's accordion body. Nothing more exciting
-                            happening here in terms of content, but just filling
-                            up the space to make it look, at least at first
-                            glance, a bit more representative of how this would
-                            look in a real-world application.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item ">
-                        <h2
-                          className="accordion-header "
-                          id="flush-headingThree"
-                        >
-                          <button
-                            className="accordion-button collapsed product-heading "
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseThree"
-                          >
-                            Instruções de uso
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseThree"
-                          className="accordion-collapse collapse product-data "
-                          aria-labelledby="flush-headingThree"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div className="accordion-body">
-                            Placeholder content for this accordion, which is
-                            intended to demonstrate the{" "}
-                            <code>.accordion-flush</code> class. This is the
-                            third item's accordion body. Nothing more exciting
-                            happening here in terms of content, but just filling
-                            up the space to make it look, at least at first
-                            glance, a bit more representative of how this would
-                            look in a real-world application.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      Copiar
+                    </a>
                   </div>
                 </div>
               </div>

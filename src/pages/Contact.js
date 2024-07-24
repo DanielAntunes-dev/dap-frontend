@@ -1,6 +1,5 @@
 import React from "react";
 import Meta from "../components/Meta";
-import BreadCrumb from "../components/BreadCrumb";
 
 import { FaHome, FaPhone, FaInfo } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
@@ -9,7 +8,6 @@ const Contact = () => {
   return (
     <>
       <Meta title={"Contato"} />
-      <BreadCrumb title="Contato" />
 
       <div className="contact-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">

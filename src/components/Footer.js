@@ -8,6 +8,7 @@ import {
   BsTwitterX,
   BsYoutube,
 } from "react-icons/bs";
+import newletter from "../images/icons/newsletter.png";
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
           <div className="row align-items-center">
             <div className="col-5">
               <div className="footer-top-data d-flex gap-30 align-items-center">
-                <img src="images/icons/newsletter.png" alt="newsletter" />
+                <img src={newletter} alt="newsletter" />
                 <h2 className="mb-0 text-white">Inscreva-se para novidades</h2>
               </div>
             </div>
@@ -131,13 +132,15 @@ const Footer = () => {
               <div className="footer-links d-flex flex-column">
                 <Link className="text-white py-2 mb-1">Sobre mim</Link>
                 <Link className="text-white py-2 mb-1">Faq</Link>
-                <Link className="text-white py-2 mb-1">Contato</Link>
+                <Link to="/contact" className="text-white py-2 mb-1">
+                  Contato
+                </Link>
               </div>
             </div>
             <div className="col-2">
               <h4 className="text-white mb-4">Links rápidos</h4>
               <div className="footer-links d-flex flex-column">
-                <Link className="text-white py-2 mb-1">T-shirts</Link>
+                <Link className="text-white py-2 mb-1">Camisetas</Link>
                 <Link className="text-white py-2 mb-1">Bermudas</Link>
                 <Link className="text-white py-2 mb-1">Calças</Link>
                 <Link className="text-white py-2 mb-1">Cuecas</Link>

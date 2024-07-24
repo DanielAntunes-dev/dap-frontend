@@ -1,8 +1,10 @@
 import React from "react";
+import Meta from "../components/Meta";
 
 const TermsAndConditions = () => {
   return (
     <>
+      <Meta title={"Termos e condições"} />
       <section className="policy-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">

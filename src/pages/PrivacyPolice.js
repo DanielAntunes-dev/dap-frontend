@@ -1,12 +1,10 @@
 import React from "react";
-import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 
 const PrivacyPolice = () => {
   return (
     <>
-      <Meta title={"Blogs"} />
-      <BreadCrumb title="Blogs" />
+      <Meta title={"Política de privacidade"} />
       <section className="policy-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">

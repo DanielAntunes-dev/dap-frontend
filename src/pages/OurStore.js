@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import ReactStars from "react-rating-stars-component";
 import ProductCard from "../components/ProductCard";
@@ -11,7 +10,6 @@ const OurStore = () => {
   return (
     <>
       <Meta title={"Minha Loja"} />
-      <BreadCrumb title="Our Store" />
       <div className="store-wrapper home-wrapper-2 py-5">
         <div className="container-xxl">
           <div className="row">

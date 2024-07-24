@@ -1,13 +1,11 @@
 import React from "react";
 import Meta from "../components/Meta";
-import BreadCrumb from "../components/BreadCrumb";
 import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <>
       <Meta title={"Login"} />
-      <BreadCrumb title="Login" />
       <div className="login-wrapper home-wrapper-2 py-5">
         <div className="container-xxl">
           <div className="row">
@@ -32,13 +30,15 @@ const Login = () => {
                     />
                   </div>
                   <div>
-                    <Link to="/forgot-password">Forgot Password?</Link>
+                    <Link className="text-dark" to="/forgot-password">
+                      Esqueceu a senha?
+                    </Link>
                     <div className="mt-3 d-flex justify-content-center gap-15 align-items-center">
                       <button className="button border-0" type="submit">
                         Login
                       </button>
-                      <Link to="/signup" className="button signup">
-                        SignUp
+                      <Link to="/signup" className="button text-white">
+                        Cadastrar
                       </Link>
                     </div>
                   </div>
