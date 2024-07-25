@@ -20,7 +20,8 @@ const Contact = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+              title="Google Maps Embed - Vila Velha, ES"
+            />
           </div>
           <div className="col-12 mt-5">
             <div className="contact-inner-wrapper d-flex justify-content-between">
