@@ -13,13 +13,15 @@ const ProductCard = (props) => {
   return (
     <>
       <div
-        className={`${location.pathname === "/store" ? `gr-${grid}` : "col-3"}`}
+        className={`${
+          location.pathname === "/products" ? `gr-${grid}` : "col-3"
+        }`}
       >
         <Link to=":id" className="product-card position-relative">
           <div className="wishlist-icon position-absolute">
-            <Link>
+            <button className="border-0 bg-transparent">
               <img src={wish} alt="wishlist" />
-            </Link>
+            </button>
           </div>
           <div className="product-image">
             <img
@@ -36,6 +38,7 @@ const ProductCard = (props) => {
           <div className="product-details">
             <h6 className="brand">Osklen</h6>
             <h5 className="product-title">Bermuda Sarja Osklen</h5>
+
             <ReactStars
               count={5}
               size={24}
@@ -43,6 +46,7 @@ const ProductCard = (props) => {
               edit={false}
               activeColor="#ffd700"
             />
+
             <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
               O dinamismo das principais metrópoles do mundo e toda a
               exuberância da natureza nacional, assim a Osklen conquistou seu
@@ -56,15 +60,15 @@ const ProductCard = (props) => {
           </div>
           <div className="action-bar position-absolute">
             <div className="d-flex flex-column gap-15">
-              <Link>
+              <button className="border-0 bg-transparent">
                 <img src={compare} alt="compare products" />
-              </Link>
-              <Link>
+              </button>
+              <button className="border-0 bg-transparent">
                 <img src={view} alt="view" />
-              </Link>
-              <Link>
+              </button>
+              <button className="border-0 bg-transparent">
                 <img src={addCart} alt="add cart" />
-              </Link>
+              </button>
             </div>
           </div>
         </Link>
